@@ -1,0 +1,8 @@
+# Repository is PUBLIC — prevent accidental uploads of private game binaries and personal saves
+*.ipa
+*.p12
+*.mobileprovision
+*save*.dat
+*backup*.dat
+*.bak
+*.backup
