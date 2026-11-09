@@ -1,0 +1,28 @@
+name: ARM32 F2 Forest7 - IPA static verification
+
+on:
+  push:
+    branches:
+      - test/forest7-room-bosses-20261109
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-ipa:
+    name: Verify exact F2 beta IPA (not an iOS emulator)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout ARM32 test branch
+        uses: actions/checkout@v4
+      - name: Validate SHA, ZIP, map topology and 7 boss generators
+        run: |
+          python3 tests/verify_ipa.py test-input/current.ipa
+      - name: Scope / safety note
+        if: always()
+        run: |
+          echo 'This job performs STATIC validation only.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'It does NOT execute ARM32 native gameplay, combat, AI, loot, Save/Continue or benchmark iOS 4S/iPad 4.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'A missing test-input/current.ipa is a BLOCKER, not a passing game test.' >> "$GITHUB_STEP_SUMMARY"
