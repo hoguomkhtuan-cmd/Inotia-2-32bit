@@ -1,0 +1,40 @@
+{
+  "version": "2026-11-09",
+  "classification": "LOCAL STATIC TEST RESULT / IPA NOT UPLOADED TO GITHUB",
+  "ipa_file": "Inotia2_F2_FOREST7_7BOSS_IN_ROOMS_NATIVE_BETA_RESIGN_REQUIRED_20261109.ipa",
+  "ipa_sha256": "44ad660b7604be51e6231044cfb4faebbf0cfa5209b6945a310187c4059ef71c",
+  "origin_baseline_sha256": "d8c49b4bbf4e2c9be9ee4b4c015ce26a7cdb7e04257b1e2af41900fc805b3adb",
+  "zip_crc": "PASS",
+  "zip_members": 661,
+  "map_records": 286,
+  "forest_darkpit_14_15_mobs": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124
+  ],
+  "forest_new_bosses_remaining": 0,
+  "native_boss_generator_id": 176,
+  "one_boss_each_room": [
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285
+  ],
+  "original_map_ids_0_through_259_byte_identical": "PASS",
+  "two_way_door_collision_reachability": "PASS in host static BFS",
+  "native_arm32_executions": 0,
+  "apple_ios_device_tests": 0,
+  "cpu_ram_fps": "NOT MEASURED",
+  "combat_loot_skills_save_continue": "NOT EXECUTED",
+  "known_risk": "Encounter module rebuilt with LLVM17 Clang, different from baseline compiler; native equivalence unproven",
+  "github_file_upload": "BLOCKED: 71.9 MB binary transfer unsupported by connected GitHub file actions; target repository is public",
+  "safe_to_promote": false
+}
